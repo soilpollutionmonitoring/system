@@ -1,0 +1,54 @@
+{
+  "_comment": "Editable default agronomy ranges. Each entry marks its source. These are general guidelines - adjust for your crop and soil type. Interpretations shown in the UI are NOT certified laboratory results.",
+  "thresholds": {
+    "soilPH": {
+      "min": 6.0,
+      "max": 7.5,
+      "unit": "pH",
+      "source": "general guideline: most crops prefer slightly acidic to neutral soil; adjust for your crop and soil type"
+    },
+    "soilMoisture": {
+      "min": 20,
+      "max": 60,
+      "unit": "%",
+      "source": "general guideline: typical field capacity range for loam soils; adjust for your crop and soil type"
+    },
+    "electricalConductivity": {
+      "min": 0,
+      "max": 2.0,
+      "unit": "mS/cm",
+      "source": "general guideline: saturation-extract EC above ~2 mS/cm indicates saline soil risk; adjust for your crop and soil type"
+    },
+    "tds": {
+      "min": 0,
+      "max": 1300,
+      "unit": "ppm",
+      "source": "calculated from EC (TDS = EC x 500, a common approximation); adjust for your crop and soil type"
+    },
+    "soilTemperature": {
+      "min": 10,
+      "max": 35,
+      "unit": "°C",
+      "source": "general guideline: biological activity range for most crops; adjust for your crop and soil type"
+    },
+    "nitrogen": {
+      "min": 50,
+      "max": 200,
+      "unit": "mg/kg",
+      "source": "general guideline only; requires a real NPK sensor - never estimated from pH or moisture"
+    },
+    "phosphorus": {
+      "min": 20,
+      "max": 80,
+      "unit": "mg/kg",
+      "source": "general guideline only; requires a real NPK sensor - never estimated from pH or moisture"
+    },
+    "potassium": {
+      "min": 100,
+      "max": 300,
+      "unit": "mg/kg",
+      "source": "general guideline only; requires a real NPK sensor - never estimated from pH or moisture"
+    }
+  },
+  "_sensorsInstalled": "NOT DECIDED YET - sensor-specific reading code in the ESP32 sketch is a placeholder until hardware is chosen. TDS is derived from EC by the backend only when EC is present and valid."
+}

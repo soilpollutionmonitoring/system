@@ -1,0 +1,42 @@
+{
+  "rules": {
+    // Deny everything by default.
+    ".read": false,
+    ".write": false,
+
+    "devices": {
+      "$deviceId": {
+        // Public read-only access to monitoring data only.
+        // WARNING: anyone with the link (and the URL) can read these paths.
+        ".read": true,
+        // No client/browser writes are allowed to telemetry.
+        ".write": false,
+
+        "latest": {
+          ".read": true,
+          ".write": false,
+          ".validate": true
+        },
+        "history": {
+          ".read": true,
+          ".write": false,
+          "$readingId": {
+            ".read": true,
+            ".write": false,
+            ".validate": true
+          }
+        },
+        // Anything else under devices/$deviceId is blocked.
+        "$other": {
+          ".read": false,
+          ".write": false
+        }
+      }
+    },
+    // Any other top-level path is denied.
+    "$other": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

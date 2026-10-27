@@ -1,0 +1,29 @@
+{
+  "_comment": "Editable thresholds moved from the user's reference dashboard (field-monitor-ESP32-live.html). Each entry is a general guideline - adjust for your crop and soil type.",
+  "moisture": {
+    "veryDry": 20,
+    "belowIdeal": 35,
+    "irrigateNow": 25,
+    "planIrrigation": 30,
+    "waterlogRisk": 65,
+    "hotDayMoisture": 30,
+    "unit": "%",
+    "source": "general guideline, adjust for your crop and soil type"
+  },
+  "temperature": {
+    "min": 10,
+    "max": 35,
+    "hotDay": 30,
+    "veryHot": 35,
+    "coolDay": 15,
+    "unit": "\u00b0C",
+    "source": "general guideline, adjust for your crop and soil type"
+  },
+  "npk": {
+    "nitrogen": { "min": 50, "max": 200, "barMax": 260, "unit": "mg/kg", "source": "general guideline, adjust for your crop and soil type" },
+    "phosphorus": { "min": 20, "max": 100, "barMax": 130, "unit": "mg/kg", "source": "general guideline, adjust for your crop and soil type" },
+    "potassium": { "min": 60, "max": 200, "barMax": 260, "unit": "mg/kg", "source": "general guideline, adjust for your crop and soil type" }
+  },
+  "_sensorsInstalled": "NPK (RS485/Modbus), capacitive soil moisture (GPIO34), DS18B20 soil temperature (GPIO14). NO pH, NO EC, NO pollution sensor - those values are never shown or estimated.",
+  "_sensorsInstalled_note2": "Removed placeholder 'thresholds' stub"
+}

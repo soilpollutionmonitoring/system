@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.local
+*.log
+functions/node_modules/
+functions/lib/
+serviceAccountKey*.json
+*-firebase-adminsdk-*.json
+.firebase/
+
+firmware/secrets.h
+reference-dashboard.html
+reference-firmware.ino
+fieldmonitor-install.log
